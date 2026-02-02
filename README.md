@@ -1,43 +1,52 @@
 # 🍽️ Royal Taste – Fine Dining Restaurant Website
 
-**Royal Taste** is a modern, fully responsive fine-dining restaurant website built using **HTML, CSS, and Vanilla JavaScript**.  
-The project focuses on elegant UI design, smooth animations, and an interactive user experience suitable for a premium restaurant brand.
+**Royal Taste** is a modern, fully responsive fine-dining restaurant website developed using **HTML, CSS, and Vanilla JavaScript**.  
+The project reflects a **premium dining experience** through elegant UI design, smooth animations, and interactive components that enhance user engagement.
+
+---
+
+## 📌 Project Overview
+
+- Premium fine-dining restaurant website concept 🍽️  
+- Focus on elegant visuals and smooth user interactions  
+- Fully responsive across Mobile, Tablet, and Desktop devices 📱💻  
+- Built using core frontend technologies without frameworks  
 
 ---
 
 ## 🌟 Features
 
-- ✨ Luxury-themed UI with modern typography  
-- 📱 Fully responsive design (Mobile, Tablet & Desktop)  
-- 🍽️ Interactive food menu with category filters  
-- 👨‍🍳 Chef’s Specials carousel with autoplay & swipe support  
+- ✨ Luxury-themed UI with modern typography and color palette  
+- 📱 Fully responsive layout for all screen sizes  
+- 🍴 Interactive food menu with category-based filtering  
+- 👨‍🍳 Chef’s Specials carousel with autoplay and swipe support  
 - 🖼️ Image gallery with lightbox preview  
-- ⭐ Customer reviews slider  
-- 📝 Reservation form with validation  
+- ⭐ Customer reviews and testimonials slider  
+- 📝 Table reservation form with input validation  
 - 📩 Newsletter subscription form  
 - 🗺️ Google Maps integration  
-- ⬆️ Scroll-to-top button  
-- 🎞️ Smooth scrolling, animations & parallax effects  
-- ♿ Accessibility & performance optimizations  
+- ⬆️ Scroll-to-top button for better navigation  
+- 🎞️ Smooth scrolling, animations, and parallax effects  
+- ♿ Accessibility and performance optimizations  
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### 🌐 HTML5
-- Semantic markup  
-- SEO-friendly structure  
+- Semantic and accessible markup  
+- SEO-friendly page structure  
 
 ### 🎨 CSS3
 - Custom properties (CSS variables)  
-- Animations & transitions  
-- Responsive layouts (Flexbox & Grid)  
+- Advanced animations and transitions  
+- Responsive layouts using Flexbox and Grid  
 
 ### ⚙️ JavaScript (Vanilla JS)
-- DOM manipulation  
+- DOM manipulation and event handling  
 - Intersection Observer API  
-- Form validation  
-- Carousel & slider functionality  
+- Client-side form validation  
+- Carousel and slider functionality  
 
 ---
 
@@ -48,5 +57,5 @@ Royal-Taste/
 │
 ├── index.html        # Main HTML file
 ├── README.md         # Project documentation
-├── assets/           # Images, icons, fonts (optional)
+├── assets/           # Images, icons, and fonts
 └── favicon.ico       # Website favicon

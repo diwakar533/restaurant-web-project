@@ -1,4 +1,4 @@
-# 🍽️ Royal Taste – Fine Dining Restaurant Website
+# 🍽️Restaurant Management System
 
 **Royal Taste** is a modern, fully responsive fine-dining restaurant website developed using **HTML, CSS, and Vanilla JavaScript**.  
 The project reflects a **premium dining experience** through elegant UI design, smooth animations, and interactive components that enhance user engagement.

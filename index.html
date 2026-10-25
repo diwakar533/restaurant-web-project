@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151811">
+<title>DineFlow | Restaurant Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f1e8;--ink:#20241b;--muted:#77796d;--green:#243c2c;--green2:#34583e;--gold:#d9b66d;--cream:#fffdf7;--line:#e5dfd1;--radius:22px;--shadow:0 18px 50px #19231712}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}.container{width:min(1160px,calc(100% - 40px));margin:auto}.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#a1803f}.section{padding:100px 0}.section-head{max-width:650px;margin-bottom:38px}.section-head h2{font:600 clamp(2.2rem,4vw,3.6rem)/1.08 "Playfair Display",serif;margin:12px 0}.section-head p{color:var(--muted);line-height:1.8;margin:0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 21px;border-radius:999px;border:1px solid transparent;background:var(--gold);color:#1d2117;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#e7c77e}.btn-dark{background:var(--green);color:white}.btn-dark:hover{background:var(--green2)}.btn-outline{border-color:#ffffff80;color:white;background:transparent}.btn-outline:hover{background:#ffffff15}
+header{position:sticky;top:0;z-index:20;background:#f5f1e8ed;backdrop-filter:blur(16px);border-bottom:1px solid #dcd5c8}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:10px;font:700 1.65rem "Playfair Display",serif;color:var(--green)}.brand-mark{display:grid;place-items:center;width:38px;height:38px;background:var(--green);color:var(--gold);border-radius:12px;font:600 1rem "Playfair Display",serif}.nav-links{display:flex;align-items:center;gap:27px;color:#505449;font-size:.92rem}.nav-links a:hover{color:#a1803f}.nav-cta{padding:11px 17px}.menu-toggle{display:none;background:none;border:0;font-size:1.7rem}
+.hero{padding:46px 0 72px}.hero-card{position:relative;min-height:570px;border-radius:30px;overflow:hidden;background:#233629;display:flex;align-items:center;color:white;isolation:isolate}.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.hero-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#111d16ed 0%,#17241ad9 40%,#1c281b52 75%,#1c281b25)}.hero-copy{max-width:670px;padding:clamp(32px,7vw,82px)}.hero-copy .eyebrow{color:#e3c783}.hero h1{font:600 clamp(3.1rem,7vw,6rem)/.99 "Playfair Display",serif;letter-spacing:-.04em;margin:20px 0}.hero h1 em{color:#e4c981;font-weight:500}.hero p{max-width:520px;color:#e6e7de;line-height:1.8;font-size:1.04rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-note{display:flex;align-items:center;gap:10px;color:#d6d9cf;font-size:.82rem;margin-top:30px}.leaf-decor{position:absolute;right:6%;bottom:4%;font-size:clamp(3rem,7vw,6rem);filter:drop-shadow(0 15px 18px #0005);animation:float 6s ease-in-out infinite;pointer-events:none}.floating-food{position:absolute;right:18%;top:15%;font-size:clamp(2rem,4vw,3.5rem);animation:float 5s ease-in-out infinite reverse;filter:drop-shadow(0 12px 18px #0005);pointer-events:none}@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-14px) rotate(4deg)}}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}.trust-item{display:flex;align-items:center;gap:14px;padding:18px 20px;background:#fffdf7a8;border:1px solid var(--line);border-radius:17px}.trust-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#e8ebdf;font-size:1.25rem}.trust-item strong{display:block;font-size:.95rem}.trust-item span{font-size:.8rem;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}.about-image-wrap{position:relative}.about-image{width:100%;height:500px;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}.image-note{position:absolute;right:-20px;bottom:25px;background:var(--gold);padding:18px 22px;border-radius:18px;font:600 1.1rem "Playfair Display",serif;box-shadow:var(--shadow)}.about-copy p{line-height:1.9;color:var(--muted)}.about-points{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:25px 0}.about-point{padding:14px;border-radius:14px;background:#fffdf7;border:1px solid var(--line);font-size:.9rem}.about-point span{margin-right:8px;color:#a1803f}
+.menu-section{background:#ece7db}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.dish{background:var(--cream);border:1px solid #e5dece;border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s}.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.dish img{width:100%;height:210px;object-fit:cover;display:block}.dish-body{padding:20px}.dish-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.dish h3{font:600 1.25rem "Playfair Display",serif;margin:0}.price{color:#8a6b2c;font-weight:700;white-space:nowrap}.dish p{color:var(--muted);font-size:.9rem;line-height:1.65;margin:12px 0 0}.tag{display:inline-block;margin-top:13px;font-size:.72rem;padding:6px 9px;background:#e9eee2;color:var(--green);border-radius:99px}
+.special-banner{display:grid;grid-template-columns:1fr 1fr;background:var(--green);color:white;border-radius:26px;overflow:hidden}.special-banner img{width:100%;height:100%;min-height:350px;object-fit:cover}.special-copy{padding:clamp(28px,5vw,60px);align-self:center}.special-copy h3{font:600 clamp(2rem,4vw,3rem)/1.1 "Playfair Display",serif;margin:14px 0}.special-copy p{line-height:1.8;color:#dbe1d5}.special-copy .eyebrow{color:#e2c47e}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:210px 210px;gap:15px}.gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:18px;transition:transform .4s}.gallery-grid img:hover{transform:scale(1.025)}.gallery-grid img:first-child{grid-row:span 2}
+.reviews{background:#e9e5d9}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:25px;background:var(--cream);border:1px solid var(--line);border-radius:20px}.stars{color:#b18a3d;letter-spacing:.15em}.review blockquote{padding:0;margin:16px 0;color:#55594f;line-height:1.8}.review strong{font-size:.9rem}.review small{display:block;color:var(--muted);margin-top:4px}
+.booking{background:#172a1d;color:white}.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.booking .section-head p{color:#c7d0c4}.booking .section-head h2{color:white}.booking-aside{padding-top:18px}.booking-aside .booking-art{font-size:4rem;letter-spacing:.3rem;margin:28px 0;animation:float 5s ease-in-out infinite}.booking-aside li{color:#d4dbd0;margin:14px 0;line-height:1.6}.booking-card{background:var(--cream);color:var(--ink);padding:clamp(22px,4vw,38px);border-radius:24px;box-shadow:0 25px 70px #0002}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:.83rem;font-weight:700;color:#53574c}.field input,.field select{width:100%;padding:13px 14px;border:1px solid #ddd8cc;background:#fff;border-radius:12px;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:#9c8245;box-shadow:0 0 0 3px #d9b66d30}.form-submit{width:100%;margin-top:20px}.form-message{display:none;margin-top:14px;padding:13px 15px;border-radius:12px;line-height:1.5;font-size:.9rem}.form-message.show{display:block}.form-message.success{background:#e6f2e4;color:#23532d}.form-message.error{background:#fbe8e4;color:#873c2d}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.contact-card{background:var(--cream);padding:30px;border:1px solid var(--line);border-radius:22px}.contact-row{display:flex;gap:14px;margin:20px 0}.contact-icon{width:42px;height:42px;flex:0 0 42px;border-radius:13px;background:#e9eee2;display:grid;place-items:center}.contact-row strong{display:block;margin-bottom:4px}.contact-row span{color:var(--muted);font-size:.9rem}.map-card{min-height:320px;border-radius:24px;background:radial-gradient(circle at 20% 20%,#637f5b55,transparent 30%),linear-gradient(135deg,#1d3023,#344b36);color:white;padding:32px;display:flex;flex-direction:column;justify-content:end;position:relative;overflow:hidden}.map-card:before{content:"🌿";font-size:8rem;position:absolute;right:15px;top:8px;opacity:.5;animation:float 6s ease-in-out infinite}.map-card h3{font:600 2rem "Playfair Display",serif;margin:0 0 10px;position:relative}.map-card p{color:#dce3d8;line-height:1.7;max-width:400px;position:relative}.map-card .btn{align-self:flex-start;position:relative}
+footer{background:#111b14;color:#e8e8df;padding:35px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner p{color:#b8c0b5;font-size:.86rem;margin:6px 0}.footer-brand{font:600 1.5rem "Playfair Display",serif;color:#e0c17b}
+.reveal{animation:rise .65s both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:900px){.nav-links{gap:15px}.nav-links a:not(.nav-cta){display:none}.menu-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.booking-grid{gap:35px}.trust-row{grid-template-columns:1fr}.gallery-grid{grid-template-rows:170px 170px}.review-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.container{width:min(100% - 28px,1160px)}.nav{height:68px}.nav-links{gap:10px}.nav-cta{padding:10px 12px;font-size:.82rem}.hero{padding:20px 0 45px}.hero-card{min-height:540px;border-radius:22px}.hero-copy{padding:28px 23px}.floating-food{right:8%;top:5%}.leaf-decor{right:5%;bottom:2%}.section{padding:70px 0}.about-grid,.booking-grid,.contact-grid,.special-banner{grid-template-columns:1fr}.about-image{height:340px}.image-note{right:8px}.menu-grid,.review-grid{grid-template-columns:1fr}.dish img{height:230px}.special-banner img{min-height:240px;max-height:300px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px 170px}.gallery-grid img:first-child{grid-row:span 2}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.booking-grid{gap:18px}.booking-aside .booking-art{font-size:2.7rem;margin:15px 0}.footer-inner{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="DineFlow home"><span class="brand-mark">D</span>DineFlow</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">Our Story</a><a href="#menu">Menu</a><a href="#specials">Specials</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      <a class="btn nav-cta" href="#booking">Book a Table <span>↗</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85" alt="Warmly lit fine dining restaurant table">
+      <div class="hero-copy">
+        <span class="eyebrow">Fresh ingredients · Thoughtful cooking</span>
+        <h1>A little more<br>flavour. A lot more <em>feeling.</em></h1>
+        <p>Gather around the table for comforting favourites, seasonal plates, and the kind of hospitality that makes an ordinary evening feel special.</p>
+        <div class="hero-actions"><a class="btn" href="#booking">Reserve your table <span>↗</span></a><a class="btn btn-outline" href="#menu">Explore the menu</a></div>
+        <div class="hero-note"><span>✦</span> Made with care, served with warmth.</div>
+      </div>
+      <span class="floating-food" aria-hidden="true">🥥</span><span class="leaf-decor" aria-hidden="true">🌿</span>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><div class="trust-icon">🥬</div><div><strong>Fresh every day</strong><span>Seasonal ingredients</span></div></div>
+      <div class="trust-item"><div class="trust-icon">🍲</div><div><strong>Made to be shared</strong><span>Comfort food, thoughtfully made</span></div></div>
+      <div class="trust-item"><div class="trust-icon">🕯️</div><div><strong>Come as you are</strong><span>Easygoing, warm hospitality</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+ <div class="container about-grid">
+  <div class="about-image-wrap"><img class="about-image" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85" alt="Chef preparing a dish in a restaurant"><div class="image-note">Good food. Good company.</div></div>
+  <div class="about-copy"><div class="section-head"><span class="eyebrow">A seat at our table</span><h2>Food tastes better when it brings us together.</h2><p>DineFlow is a restaurant experience built around simple things done well: fresh ingredients, welcoming service, and dishes worth coming back for.</p></div><p>Whether it is a quick meal with friends, a family dinner, or a little celebration, we want every visit to feel relaxed and memorable. Our menu brings familiar favourites together with seasonal inspiration.</p><div class="about-points"><div class="about-point"><span>✦</span> Freshly prepared dishes</div><div class="about-point"><span>✦</span> Friendly service</div><div class="about-point"><span>✦</span> Comfortable atmosphere</div><div class="about-point"><span>✦</span> Easy table reservations</div></div><a class="btn btn-dark" href="#booking">Plan your visit ↗</a></div>
+ </div>
+</section>
+
+<section id="menu" class="section menu-section">
+ <div class="container"><div class="section-head"><span class="eyebrow">From our kitchen</span><h2>A menu made for good moments.</h2><p>A small sample menu for the DineFlow demo. Prices and dishes can be edited to match the restaurant you want to present.</p></div>
+  <div class="menu-grid">
+   <article class="dish"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Fresh seasonal salad"><div class="dish-body"><div class="dish-top"><h3>Garden Bowl</h3><span class="price">₹249</span></div><p>Crisp greens, seasonal vegetables, toasted seeds and a bright house dressing.</p><span class="tag">Fresh & light</span></div></article>
+   <article class="dish"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Freshly baked pizza"><div class="dish-body"><div class="dish-top"><h3>House Special Pizza</h3><span class="price">₹349</span></div><p>Golden crust, rich tomato, melted cheese and a handful of fresh herbs.</p><span class="tag">Guest favourite</span></div></article>
+   <article class="dish"><img src="https://images.unsplash.com/photo-1547592180-84f4b8f0d8f0?auto=format&fit=crop&w=700&q=80" alt="Comforting bowl of food"><div class="dish-body"><div class="dish-top"><h3>Chef's Comfort Bowl</h3><span class="price">₹289</span></div><p>A hearty, comforting bowl with fragrant spices and a fresh finish.</p><span class="tag">Made with care</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="specials" class="section">
+ <div class="container"><div class="special-banner"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=85" alt="Sharing platter fresh from the grill"><div class="special-copy"><span class="eyebrow">A little something special</span><h3>The table is better when everyone gets a taste.</h3><p>Make it a sharing evening with a chef-inspired platter, seasonal sides and something sweet to finish. Ask the team about today's special when you visit.</p><a class="btn" href="#booking">Book for your group ↗</a></div></div></div>
+</section>
+
+<section id="gallery" class="section">
+ <div class="container"><div class="section-head"><span class="eyebrow">A look around</span><h2>Little moments from the table.</h2><p>Good food, warm lighting, and details that make a meal feel like an occasion.</p></div>
+  <div class="gallery-grid">
+   <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant dining room">
+   <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Food preparation">
+   <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Fresh ingredients">
+   <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80" alt="Shared food platter">
+   <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant interior">
+  </div>
+ </div>
+</section>
+
+<section id="reviews" class="section reviews">
+ <div class="container"><div class="section-head"><span class="eyebrow">Kind words</span><h2>Good meals stay with you.</h2><p>Sample testimonials for the project demo. Replace these with real customer reviews before publishing.</p></div>
+  <div class="review-grid">
+   <article class="review"><div class="stars">★★★★★</div><blockquote>“A relaxed atmosphere, thoughtful service and food that feels freshly made. A lovely place to spend an evening.”</blockquote><strong>Priya R.</strong><small>Sample customer review</small></article>
+   <article class="review"><div class="stars">★★★★★</div><blockquote>“The menu has something for everyone, and booking a table is simple. Would happily visit again.”</blockquote><strong>Arun K.</strong><small>Sample customer review</small></article>
+   <article class="review"><div class="stars">★★★★★</div><blockquote>“We came as a group and enjoyed sharing different dishes. Warm service made the whole experience better.”</blockquote><strong>Meera S.</strong><small>Sample customer review</small></article>
+  </div>
+ </div>
+</section>
+
+<section id="booking" class="section booking">
+ <div class="container booking-grid">
+  <div class="booking-aside"><div class="section-head"><span class="eyebrow">Your table is waiting</span><h2>Let's make a little room for you.</h2><p>Send a reservation request and our team can review it. Your booking remains pending until confirmed by the restaurant.</p></div><div class="booking-art" aria-hidden="true">🥥 🌿 🍲</div><ul><li>Choose your preferred date and time.</li><li>Tell us how many guests are joining.</li><li>Submit once — your request is saved in the system.</li></ul></div>
+  <div class="booking-card">
+   <form id="reservation-form">
+    <div class="form-grid">
+     <div class="field full"><label for="restaurant_name">Restaurant</label><input id="restaurant_name" name="restaurant_name" value="DineFlow" readonly></div>
+     <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Full name" required maxlength="100" autocomplete="name"></div>
+     <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="e.g. 9876543210" required autocomplete="tel"></div>
+     <div class="field full"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"></div>
+     <div class="field"><label for="date">Booking date</label><input id="date" name="date" type="date" required></div>
+     <div class="field"><label for="time">Booking time</label><select id="time" name="time" required><option value="">Choose a time</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option></select></div>
+     <div class="field full"><label for="guests">Number of guests</label><select id="guests" name="guests" required><option value="">Select guests</option><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option></select></div>
+    </div>
+    <button class="btn btn-dark form-submit" id="booking-submit" type="submit">Send reservation request ↗</button>
+    <div id="booking-message" class="form-message" role="status" aria-live="polite"></div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="section">
+ <div class="container contact-grid">
+  <div><div class="section-head"><span class="eyebrow">Come say hello</span><h2>Find your way to the table.</h2><p>This demo uses a Google Maps search for DineFlow instead of an embedded map. You can change the search to the actual restaurant location later.</p></div>
+   <div class="contact-card">
+    <div class="contact-row"><div class="contact-icon">📍</div><div><strong>Location</strong><span>Search DineFlow or your chosen restaurant in Maps</span></div></div>
+    <div class="contact-row"><div class="contact-icon">🕰️</div><div><strong>Opening hours</strong><span>Daily · 5:00 PM – 10:00 PM (demo hours)</span></div></div>
+    <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Reservations</strong><span>Use the online booking form and await confirmation</span></div></div>
+   </div>
+  </div>
+  <div class="map-card"><h3>Good food is closer than you think.</h3><p>Search for the restaurant you want to book, check directions and explore the area in Google Maps.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=DineFlow+restaurant" target="_blank" rel="noopener noreferrer">Open in Maps ↗</a></div>
+ </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><div><div class="footer-brand">DineFlow</div><p>A simple restaurant reservation and management system.</p></div><p>Built with HTML, CSS, JavaScript, Python Flask and SQLite.</p><a href="#home">Back to top ↑</a></div></footer>
+<script>
+const form = document.getElementById("reservation-form");
+const message = document.getElementById("booking-message");
+const submitButton = document.getElementById("booking-submit");
+const dateInput = document.getElementById("date");
+dateInput.min = new Date().toLocaleDateString("en-CA");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  message.className = "form-message";
+  message.textContent = "";
+  submitButton.disabled = true;
+  submitButton.textContent = "Saving request...";
+  const payload = Object.fromEntries(new FormData(form).entries());
+  try {
+    const response = await fetch("/api/reservations", {
+      method: "POST",
+      headers: {"Content-Type":"application/json", "Accept":"application/json"},
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.error || `Request failed (${response.status}).`);
+    message.textContent = result.message || "Your reservation request was saved.";
+    message.className = "form-message show success";
+    form.reset();
+    document.getElementById("restaurant_name").value = "DineFlow";
+    dateInput.min = new Date().toLocaleDateString("en-CA");
+  } catch (error) {
+    message.textContent = error instanceof TypeError
+      ? "DineFlow could not reach the Flask server. Make sure `py app.py` is still running, then refresh this page."
+      : (error.message || "Could not save your request. Please try again.");
+    message.className = "form-message show error";
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send reservation request ↗";
+  }
+});
+</script>
+</body>
+</html>

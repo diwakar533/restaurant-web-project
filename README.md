@@ -1,67 +1,82 @@
-# 🍽️Restaurant Management System
+# DineFlow – Restaurant Management System
 
-**Royal Taste** is a modern, fully responsive fine-dining restaurant website developed using **HTML, CSS, and Vanilla JavaScript**.  
-The project reflects a **premium dining experience** through elegant UI design, smooth animations, and interactive components that enhance user engagement.
+DineFlow is a web-based restaurant management system designed to provide an attractive restaurant website with an online table reservation feature.
 
----
+## Features
 
-## 📌 Project Overview
+- Responsive restaurant website
+- Home, About, Menu, Specials, Gallery, Reviews, Booking, and Contact sections
+- Online table reservation form
+- Flask backend with SQLite database
+- Admin login and reservation management dashboard
+- Update reservation status to Pending, Confirmed, or Cancelled
+- Google Maps directions link
 
-- Premium fine-dining restaurant website concept 🍽️  
-- Focus on elegant visuals and smooth user interactions  
-- Fully responsive across Mobile, Tablet, and Desktop devices 📱💻  
-- Built using core frontend technologies without frameworks  
+## Technologies Used
 
----
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python, Flask
+- **Database:** SQLite
 
-## 🌟 Features
-
-- ✨ Luxury-themed UI with modern typography and color palette  
-- 📱 Fully responsive layout for all screen sizes  
-- 🍴 Interactive food menu with category-based filtering  
-- 👨‍🍳 Chef’s Specials carousel with autoplay and swipe support  
-- 🖼️ Image gallery with lightbox preview  
-- ⭐ Customer reviews and testimonials slider  
-- 📝 Table reservation form with input validation  
-- 📩 Newsletter subscription form  
-- 🗺️ Google Maps integration  
-- ⬆️ Scroll-to-top button for better navigation  
-- 🎞️ Smooth scrolling, animations, and parallax effects  
-- ♿ Accessibility and performance optimizations  
-
----
-
-## 🛠️ Tech Stack
-
-### 🌐 HTML5
-- Semantic and accessible markup  
-- SEO-friendly page structure  
-
-### 🎨 CSS3
-- Custom properties (CSS variables)  
-- Advanced animations and transitions  
-- Responsive layouts using Flexbox and Grid  
-
-### ⚙️ JavaScript (Vanilla JS)
-- DOM manipulation and event handling  
-- Intersection Observer API  
-- Client-side form validation  
-- Carousel and slider functionality  
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
-Royal-Taste/
-│
-├── index.html        # Main HTML file
-├── README.md         # Project documentation
-├── assets/           # Images, icons, and fonts
-└── favicon.ico       # Website favicon
+DineFlow/
+├── app.py
+├── requirements.txt
+├── README.md
+└── project[1]/
+    └── dIV/
+        └── index.html
+```
 
-## ✅ Conclusion
+## Installation and Setup
 
-The **Royal Taste – Fine Dining Restaurant Website** successfully demonstrates the creation of a premium, user-focused web experience using core frontend technologies. Through elegant UI design, smooth animations, and interactive components, the project delivers a visually appealing and fully responsive website suited for a modern fine-dining brand.
+1. Install Python on your computer.
+2. Open the project folder in VS Code.
+3. Create and activate a virtual environment:
 
-This project highlights strong skills in **HTML, CSS, and Vanilla JavaScript**, with a clear focus on **UI/UX principles, responsiveness, accessibility, and performance optimization**. It serves as a valuable addition to a frontend portfolio, internship submission, or academic project, showcasing the ability to build real-world web interfaces without relying on external frameworks.
+   ```bash
+   py -m venv .venv
+   .venv\Scripts\Activate.ps1
+   ```
+
+4. Install dependencies:
+
+   ```bash
+   py -m pip install -r requirements.txt
+   ```
+
+5. Set the required environment variables in PowerShell:
+
+   ```powershell
+   $env:ADMIN_PASSWORD = "choose-a-strong-password"
+   $env:FLASK_SECRET_KEY = "replace-with-a-long-random-secret"
+   ```
+
+6. Run the application:
+
+   ```bash
+   py app.py
+   ```
+
+7. Open the website at `http://127.0.0.1:5000`.
+
+## Admin Dashboard
+
+Open `http://127.0.0.1:5000/admin/login` to access the admin login page. Use the password configured in your environment.
+
+## Database
+
+DineFlow uses SQLite to store reservation information. The database is created by the application as configured in the backend.
+
+## Future Enhancements
+
+- Email or SMS reservation notifications
+- Table availability and capacity management
+- Online payment integration
+- Customer accounts and reservation history
+
+## Disclaimer
+
+This project is intended for educational and demonstration purposes. Configure secure credentials and production-ready settings before deploying it publicly.
